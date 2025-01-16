@@ -4,9 +4,9 @@ from datetime import datetime
 from airflow.operators.python import PythonOperator
 
 # Separate files for importing raw data from source, staging model, and intermediate models (the basis for marts)
-from my_radancy_test_import_raw_data import _import_raw_data
-from my_radancy_test_stg_customers import _create_stg_customers
-from my_radancy_test_int_models import _create_int_accounts, _create_int_ad_campaigns, _create_int_customer_devices, _create_int_customers, _create_int_fct_customer_activity
+from import_raw_data import _import_raw_data
+from stg_customers import _create_stg_customers
+from int_models import _create_int_accounts, _create_int_ad_campaigns, _create_int_customer_devices, _create_int_customers, _create_int_fct_customer_activity
 
 
 # Create the DAG for this workflow.
